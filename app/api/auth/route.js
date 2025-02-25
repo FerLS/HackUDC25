@@ -35,7 +35,7 @@ export async function POST(req) {
 
       // ✅ Establecer la cookie con `cookies()` de `next/headers`
       cookies().set("token", token, {
-        maxAge: 60 * 60 * 24, // 1 día
+        maxAge: 60 * 60 * 24 * 30, // 30 día
         httpOnly: false,
         secure: process.env.NODE_ENV === "production",
         sameSite: "strict",

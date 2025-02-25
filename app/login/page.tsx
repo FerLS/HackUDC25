@@ -22,8 +22,8 @@ export default function LoginScreen() {
       });
       if (response.status === 200) {
         setIsLoggedIn(true);
-        const { name } = response.data;
-        localStorage.setItem("username", name);
+        const { user } = response.data;
+        localStorage.setItem("username", user.name);
         localStorage.setItem("email", email);
         window.location.href = "/main";
       } else {
