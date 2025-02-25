@@ -92,7 +92,7 @@ export default function ChatScreen({
     }
   };
   return (
-    <div className="w-full h-[100dvh] items-center justify-start flex flex-col space-y-8 overflow-hidden">
+    <div className="w-full h-[100dvh] items-center justify-start flex flex-col space-y-8 overflow-hidden ">
       <motion.div
         initial={{ minHeight: "50dvh", height: "50dvh", opacity: 0, y: -50 }}
         animate={{
@@ -105,7 +105,7 @@ export default function ChatScreen({
         className="flex flex-col items-center justify-start w-full transition-transform transform bg-chart-1 p-5 rounded-b-[2rem]"
       >
         {/* Header */}
-        <div className="flex px-10 w-screen justify-between items-center ">
+        <div className="flex px-10 w-full justify-between items-center  relative">
           <AnimatePresence>
             {conversation.length == 0 && (
               <motion.div
@@ -153,7 +153,7 @@ export default function ChatScreen({
             whileTap={{ scale: 1.2 }}
             animate={{ rotate: [0, 10, -10, 10, -10, 0] }}
             transition={{ duration: 0.5 }}
-            className="z-20"
+            className="z-20 "
           >
             <Cuca
               className={`w-28 h-28 -mr-2 fill-chart-2 stroke-chart-2 transition-transform ${
@@ -161,7 +161,7 @@ export default function ChatScreen({
               } `}
             />
           </motion.div>
-          <div className="w-28 h-28 bg-chart-2/40 rounded-full absolute right-5 top-10" />
+          <div className="w-28 h-28 bg-chart-2/40 rounded-full absolute right-5 top-5" />
         </div>
 
         {/* Conversations */}

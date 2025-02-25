@@ -39,7 +39,7 @@ export default function LoginScreen() {
   };
 
   return (
-    <div className="bg-white p-8 shadow-md w-screen h-screen items-center justify-center flex flex-col space-y-10">
+    <div className="bg-white p-8 shadow-md w-screen h-screen items-center justify-center flex flex-col space-y-10 md:px-[35%]">
       <h1 className="text-3xl font-bold text-center text-black">
         Iniciar Sesión
       </h1>

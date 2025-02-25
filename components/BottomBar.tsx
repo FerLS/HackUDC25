@@ -40,7 +40,7 @@ export default function BottomBar({
   return (
     <motion.div
       ref={containerRef}
-      className="flex justify-between items-center absolute bottom-10 w-[90%] p-1 rounded-full bg-primary shadow-lg"
+      className="flex justify-between items-center absolute bottom-10 w-[90%] md:w-[40%]  p-1 rounded-full bg-primary shadow-lg"
       initial={{ y: 100, opacity: 0 }}
       animate={{ y: hidden ? 200 : 0, opacity: hidden ? 0 : 1 }}
       transition={{ duration: 0.3, ease: "easeInOut", delay: 0.1 }}

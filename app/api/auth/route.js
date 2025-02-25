@@ -46,14 +46,12 @@ export async function POST(req) {
         success: true,
         user: { name: user.name, email: user.email },
       });
-    }
-
-    if (action === "register") {
-      const existingUser = await User.findOne({ email });
+    } else if (action === "register") {
+      const existingUser = await User.findOne({ name });
       if (existingUser) {
         return NextResponse.json(
           { success: false, message: "El usuario ya existe" },
-          { status: 400 }
+          { status: 401 }
         );
       }
 
@@ -64,9 +62,7 @@ export async function POST(req) {
         success: true,
         user: { name: user.name, email: user.email },
       });
-    }
-
-    if (action === "logout") {
+    } else if (action === "logout") {
       const response = new Response(JSON.stringify({ success: true }), {
         status: 200,
         headers: { "Content-Type": "application/json" },

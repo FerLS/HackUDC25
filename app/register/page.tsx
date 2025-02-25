@@ -22,15 +22,12 @@ export default function RegisterScreen() {
         password,
         action: "register",
       });
-      if (response.status === 201) {
-        setIsRegistered(true);
-        const { name } = response.data;
-        localStorage.setItem("username", name);
-        localStorage.setItem("email", email);
 
+      if (response.status === 200) {
+        setIsRegistered(true);
         window.location.href = "/login";
       } else {
-        alert("Error en el registro");
+        alert("Error en el registro2");
       }
     } catch (error) {
       alert("Error en el registro");

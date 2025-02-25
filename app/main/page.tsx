@@ -21,7 +21,7 @@ export default function Page() {
   };
 
   return (
-    <main className="flex flex-col items-center justify-start h-[100dvh] w-screen">
+    <main className="flex flex-col items-center justify-start h-[100dvh] w-full">
       <AnimatePresence>
         {screen === "Chat" && (
           <motion.div
